@@ -180,7 +180,7 @@ function App() {
   return (
     <div className='App'>
       { loading > 0 ? <Loading val={((5-loading) / 5)*100} /> : <div className='card d-flex flex-column vh-100 overflow-hidden'>
-        <div className="card-header bg-info text-center"><b>Informasi Dormitory Chatbot</b></div>
+        <div className="card-header bg-info text-center"><b>Layanan Informasi UNKLAB</b></div>
 				<div className='card-body' style={{overflowY:'scroll'}} id='content-chat-feed'>
           { chats.map((obj, index) => ContainerBot({...obj, index})) }
 				</div> 
