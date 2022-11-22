@@ -99,7 +99,7 @@ function App() {
       // predict response chatbot
       const [respond_bot, prob_bot] = predict_bot(input_chat);
       const prob_val = (parseFloat(prob_bot)*100).toFixed(2);
-      const threshold = 100;
+      const threshold = 60;
       let makianCheck = false;
       makian.forEach(m => {
         if(m === input_chat) {
