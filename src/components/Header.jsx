@@ -5,7 +5,7 @@ class Header extends Component {
         return (
             <div className="card-header bg-info text-center">
                 <b>
-                    Informasi Dormitory Chatbot
+                    Layanan Informasi UNKLAB
                 </b>
             </div>
         );
