@@ -86,7 +86,7 @@
     {"phrase": "kaprodi informatik", "result": {"kaprodiinformatika": 1}},
     {"phrase": "siapa kaprodi jurusan sistem informasi", "result": {"kaprodisi": 1}},
     {"phrase": "kaprodi jurusan sistem informasi", "result": {"kaprodisi": 1}},
-    {"phrase": "apakah mahasis akan mengikuti ibadah di universitas klabat", "result": {"ibadah": 1}},
+    {"phrase": "apakah mahasiswa akan mengikuti ibadah di universitas klabat", "result": {"ibadah": 1}},
     {"phrase": "ibadah yang harus di ikuti di unklab", "result": {"jadwalibdah": 1}},
     {"phrase": "ibadah vespers dilaksana pada jamberapa", "result": {"vesper": 1}},
     {"phrase": "ibadah pa dilaksanakan pada jamberapa", "result": {"pa": 1}},

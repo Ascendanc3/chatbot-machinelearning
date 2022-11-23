@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { ContainerBot, Loading } from './components';
 import { build_dictionary, clean_input, get_time } from './functions';
+import data_responses from './data/data-responses';
 
 const brain = require('brain.js');
 let trainingPhrases = require('./data/data-patterns.json');
-const data_responses = require('./data/data-responses.json');
+// const data_responses = require('./data/data-responses');
 const makian = [
   'anjing', 'babi',
   'bangsat', 'bajingan',
@@ -21,7 +22,9 @@ const makian = [
 
 
 ];
-trainingPhrases = [...trainingPhrases, ...makian.map(m => ({phrase: m, result: { makian: 1 }}))];
+const waktu = ['ini hari apa', 'sekarang hari apa', 'hari sekarang', 'hari', 'ini bulan apa', 'sekaranb ulan apa', 'bulan sekarang', 'bulan', 'ini tahun berapa', 'sekarang tahun berapa', 'tahun sekarang', 'tahun', 'sekarang jam berapa', 'jam sekarang', 'jam', 'sekarang menit keberapa', 'menit sekarang', 'menit', 'sekarang detik keberapa', 'detik sekarang', 'detik'];
+
+trainingPhrases = [...trainingPhrases, ...makian.map(m => ({phrase: m, result: { makian: 1 }})),  ...waktu.map(m => ({phrase: m, result: { waktu: 1 }}))];
 
 
 
