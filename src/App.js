@@ -9,6 +9,16 @@ const makian = [
   'anjing', 'babi',
   'bangsat', 'bajingan',
   'ngentod', 'goblok',
+  'kurang ajar', 'idiot',
+  'tolol', 'sarap',
+  'keparat', 'cacat banget',
+  'geblek', 'asu',
+  'budek', 'anak anjing',
+  'anak babi', 'puki',
+  'cuki', 'pemai',
+  'pendo', 'mai',
+  'kuda cuki',
+
 
 ];
 trainingPhrases = [...trainingPhrases, ...makian.map(m => ({phrase: m, result: { makian: 1 }}))];
