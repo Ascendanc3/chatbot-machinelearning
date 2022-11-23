@@ -3,12 +3,15 @@ import { ContainerBot, Loading } from './components';
 import { build_dictionary, clean_input, get_time } from './functions';
 
 const brain = require('brain.js');
-const trainingPhrases = require('./data/data-patterns.json');
+let trainingPhrases = require('./data/data-patterns.json');
 const data_responses = require('./data/data-responses.json');
 const makian = [
   'anjing', 'babi',
   'bangsat', 'bajingan',
+  'ngentod', 'goblok',
+
 ];
+trainingPhrases = [...trainingPhrases, ...makian.map(m => ({phrase: m, result: { makian: 1 }}))];
 
 
 
@@ -99,7 +102,7 @@ function App() {
       // predict response chatbot
       const [respond_bot, prob_bot] = predict_bot(input_chat);
       const prob_val = (parseFloat(prob_bot)*100).toFixed(2);
-      const threshold = 60;
+      const threshold = 50;
       let makianCheck = false;
       makian.forEach(m => {
         if(m === input_chat) {
@@ -112,13 +115,6 @@ function App() {
         setChats([...chats, user, {
           typ: true,
           msg: respond_bot,
-          prb: prob_val,
-          tim: get_time(new Date()),
-        }]);
-      } else if(makianCheck) {
-        setChats([...chats, user, {
-          typ: true,
-          msg: 'Maaf, tidak menerima kata kasar.',
           prb: prob_val,
           tim: get_time(new Date()),
         }]);

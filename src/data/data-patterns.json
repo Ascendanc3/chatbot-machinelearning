@@ -93,8 +93,7 @@
     {"phrase": "ibadah sabat dilsaknakan pada jamberapa", "result": {"sabat": 1}},
     {"phrase": "pada tahun berapa universitas klabat di dirikan", "result": {"unklabdiresmikan": 1}},
     
-    {"phrase": "kata kata kasar", "result": {"makian": 1}},
-    {"phrase": "kata kata makian", "result": {"makian": 1}},
+
     {"phrase": "pada tahun berapa fakultas ilmu komputer diresmikan pertama kali", "result": {"angkatanfik": 1}}
 
   ]
